@@ -1,0 +1,14 @@
+  <section class="pk-accordion" data-pk="accordion">
+    <div class="pk-accordion__container">
+      {% for i in widget.items %}
+        <h3 class="pk-accordion__trigger" data-pk="accordion-trigger">
+          {{ i.title }}
+        </h3>
+        <div class="pk-accordion__body" data-pk="accordion-body">
+          <div class="pk-accordion__content">
+            {{ apos.areas.richText(i.body) }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
