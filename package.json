@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/punkave/pk-accordion-widgets/issues"
   },
-  "homepage": "https://github.com/punkave/pk-accordion-widgets#readme"
+  "homepage": "https://github.com/punkave/pk-accordion-widgets#readme",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-punkave": "^2.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0"
+  }
 }
