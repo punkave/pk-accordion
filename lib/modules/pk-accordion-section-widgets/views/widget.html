@@ -1,0 +1,23 @@
+{% set section = data.widget %}
+
+<div class="pk-accordion__section">
+  <div class="pk-accordion__section-header">
+    <div class="pk-accordion__section-title">
+      {%- block sectionTitle -%}
+        {{ apos.singleton(section, 'title', 'apostrophe-rich-text') }}
+      {%- endblock -%}
+    </div>
+    <button class="pk-accordion__section-trigger" data-role="accordion-trigger">
+      {%- block sectionTrigger -%} Toggle {%- endblock -%}
+    </button>
+  </div>
+  <div class="pk-accordion__section-content">
+    {%- block beforeSectionContent -%}{%- endblock -%}
+    {% block sectionContet %}
+      {{ apos.area(section, 'content', {
+        widgets: data.options.widgets
+      }) }}
+    {% endblock %}
+    {%- block afterSectionContent -%}{%- endblock -%}
+  </div>
+</div>

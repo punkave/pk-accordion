@@ -1,0 +1,17 @@
+{% set accordion = data.widget %}
+{% set sectionWidgets = data.options.widgets %}
+
+<div class="pk-accordion">
+  {%- block sectionsArea -%}
+    {{ apos.area(accordion, 'sections', {
+      widgets: {
+        'pk-accordion-section': {
+          widgets: sectionWidgets
+        },
+        'apostrophe-rich-text': {
+          widgets: sectionWidgets
+        }
+      }
+    }) }}
+  {%- endblock -%}
+</div>

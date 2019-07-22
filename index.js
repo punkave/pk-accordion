@@ -1,5 +1,9 @@
 module.exports = {
-  extend: 'apostrophe-module', // or widget or custom-page
-  name: '',
-  label: ''
+  name: 'pk-accordion',
+  label: 'Accordion',
+  moogBundle: {
+    modules: ['pk-accordion-section-widgets', 'pk-accordion-widgets'],
+    directory: 'lib/modules'
+  },
+  directory: 'lib/modules'
 };
