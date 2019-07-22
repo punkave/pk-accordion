@@ -6,6 +6,7 @@ const trigger = '[data-role=pk-accordion-section-trigger]';
 export default {
   init
 };
+
 function init () {
   apos.define('pk-accordion-widgets', {
     extend: 'apostrophe-widgets',
