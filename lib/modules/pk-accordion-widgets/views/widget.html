@@ -6,10 +6,10 @@
     {{ apos.area(accordion, 'sections', {
       widgets: {
         'pk-accordion-section': {
-          widgets: sectionWidgets
-        },
-        'apostrophe-rich-text': {
-          widgets: sectionWidgets
+          widgets: sectionWidgets,
+          controls: {
+            position: 'bottom-right'
+          }
         }
       }
     }) }}
