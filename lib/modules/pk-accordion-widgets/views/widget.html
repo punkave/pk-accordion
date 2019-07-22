@@ -1,7 +1,7 @@
 {% set accordion = data.widget %}
 {% set sectionWidgets = data.options.widgets %}
 
-<div class="pk-accordion">
+<div class="pk-accordion" data-component="pk-accordion">
   {%- block sectionsArea -%}
     {{ apos.area(accordion, 'sections', {
       widgets: {
