@@ -20,7 +20,7 @@
   opacity: 0;
   visibility: hidden; }
   .pk-accordion__section-content.is-active {
-    max-height: none;
+    max-height: 100%;
     opacity: 1;
     visibility: visible; }
 
