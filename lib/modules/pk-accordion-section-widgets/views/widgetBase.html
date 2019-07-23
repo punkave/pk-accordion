@@ -12,7 +12,7 @@
       {%- block sectionTrigger -%} Toggle {%- endblock -%}
     </button>
   </div>
-  <div class="pk-accordion__section-content {% if namespace  %} {{namespace}}__content {% endif %}" data-role="pk-accordion-section">
+  <div class="pk-accordion__section-content {% if namespace  %} {{namespace}}__section-content {% endif %}" data-role="pk-accordion-section">
     {%- block beforeSectionContent -%}{%- endblock -%}
     {% block sectionContet %}
       {{ apos.area(section, 'content', {
