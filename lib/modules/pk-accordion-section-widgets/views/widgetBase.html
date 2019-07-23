@@ -13,12 +13,14 @@
     </button>
   </div>
   <div class="pk-accordion__section-content {% if namespace  %} {{namespace}}__section-content {% endif %}" data-role="pk-accordion-section">
-    {%- block beforeSectionContent -%}{%- endblock -%}
-    {% block sectionContet %}
-      {{ apos.area(section, 'content', {
-        widgets: data.options.widgets
-      }) }}
-    {% endblock %}
-    {%- block afterSectionContent -%}{%- endblock -%}
+    <div class="pk-accordion__section-content-inner {% if namespace  %} {{namespace}}__section-content-inner {% endif %}">
+      {%- block beforeSectionContent -%}{%- endblock -%}
+      {% block sectionContet %}
+        {{ apos.area(section, 'content', {
+          widgets: data.options.widgets
+        }) }}
+      {% endblock %}
+      {%- block afterSectionContent -%}{%- endblock -%}
+    </div>
   </div>
 </div>
