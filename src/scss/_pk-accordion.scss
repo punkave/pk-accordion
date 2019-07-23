@@ -14,6 +14,8 @@ $pk-accordion-transition: all 100ms ease-in-out;
 }
 
 .pk-accordion__section-trigger {
+  width: 2rem;
+  height: 2rem;
   font-family: $pk-accordion-font-family;
   font-size: $pk-accordion-font-size;
 }
