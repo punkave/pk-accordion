@@ -1,12 +1,14 @@
 {% set accordion = data.widget %}
 {% set sectionWidgets = data.options.widgets %}
+{% set namespace = data.options.namespace %}
 
-<div class="pk-accordion" data-component="pk-accordion">
+<div class="pk-accordion {% if namespace %} {{ namespace }} {% endif %}" data-component="pk-accordion">
   {%- block sectionsArea -%}
     {{ apos.area(accordion, 'sections', {
       widgets: {
         'pk-accordion-section': {
           widgets: sectionWidgets,
+          namespace: namespace,
           controls: {
             position: 'bottom-left'
           }
