@@ -42,3 +42,28 @@ For example, passing `my-widget-class` into `namespace` will create the followin
     <div class="pk-accordion__section-header  my-widget-class__section-header" data-role="pk-accordion-section-header">
       ...
 ```
+
+There are several nunjucks blocks you can hook into to override the content of parts of the widget. Just extend `widgetBase.html` in your project level `widget.html` and add your content into those blocks. See `widgetBase.html` for more context on placement of these blocks within each widget.
+
+```markup
+
+{% extends 'widgetBase.html' %}
+
+{% block sectionsArea %}
+{% endblock %}
+
+{% block sectionTitle %}
+{% endblock %}
+
+{% block sectionTrigger %}
+{% endblock %}
+
+{% block beforeSectionContent %}
+{% endblock %}
+
+{% block sectionContent %}
+{% endblock %}
+
+{% block afterSectionContent %}
+{% endblock %}
+```
