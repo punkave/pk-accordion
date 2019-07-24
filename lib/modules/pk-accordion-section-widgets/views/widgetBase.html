@@ -1,0 +1,26 @@
+{% set section = data.widget %}
+{% set namespace = data.options.namespace %}
+
+<div class="pk-accordion__section {% if namespace  %} {{namespace}}__section {% endif %}">
+  <div class="pk-accordion__section-header {% if namespace  %} {{namespace}}__section-header {% endif %}" data-role="pk-accordion-section-header">
+    <div class="pk-accordion__section-title {% if namespace  %} {{namespace}}__section-title {% endif %}">
+      {%- block sectionTitle -%}
+        {{ section.title }}
+      {%- endblock -%}
+    </div>
+    <button class="pk-accordion__section-trigger {% if namespace  %} {{namespace}}__section-trigger {% endif %}" data-role="pk-accordion-section-trigger">
+      {%- block sectionTrigger -%} Toggle {%- endblock -%}
+    </button>
+  </div>
+  <div class="pk-accordion__section-content {% if namespace  %} {{namespace}}__section-content {% endif %}" data-role="pk-accordion-section">
+    <div class="pk-accordion__section-content-inner {% if namespace  %} {{namespace}}__section-content-inner {% endif %}">
+      {%- block beforeSectionContent -%}{%- endblock -%}
+      {% block sectionContent %}
+        {{ apos.area(section, 'content', {
+          widgets: data.options.widgets
+        }) }}
+      {% endblock %}
+      {%- block afterSectionContent -%}{%- endblock -%}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+$pk-accordion-font-family: sans-serif;
+$pk-accordion-font-size: 1.6rem;
+$pk-accordion-transition: all 100ms ease-in-out;
+
+.pk-accordion__section-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.pk-accordion__section-title {
+  font-family: $pk-accordion-font-family;
+  font-size: $pk-accordion-font-size;
+}
+
+.pk-accordion__section-trigger {
+  width: 2rem;
+  height: 2rem;
+  font-family: $pk-accordion-font-family;
+  font-size: $pk-accordion-font-size;
+}
+
+.pk-accordion__section-content {
+  transition: $pk-accordion-transition;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  &.is-active {
+    max-height: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.pk-accordion__section-content-inner {
+  padding: 1rem;
+}
