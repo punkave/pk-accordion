@@ -15,7 +15,6 @@ function init () {
         const section = $widget[0].querySelector(component);
         const currentTrigger = section.querySelector(trigger);
         const currentViewport = pkutils.helpers.closest(currentTrigger, header).nextElementSibling;
-        console.log('init section');
         currentTrigger.addEventListener('click', (event) => {
           toggleSection({
             trigger: currentTrigger,
