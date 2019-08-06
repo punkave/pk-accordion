@@ -1,7 +1,7 @@
 {% set section = data.widget %}
 {% set namespace = data.options.namespace %}
 
-<div class="pk-accordion__section {% if namespace  %} {{namespace}}__section {% endif %}">
+<div class="pk-accordion__section {% if namespace  %} {{namespace}}__section {% endif %}" data-component="pk-accordion-section">
   <div class="pk-accordion__section-header {% if namespace  %} {{namespace}}__section-header {% endif %}" data-role="pk-accordion-section-header">
     <div class="pk-accordion__section-title {% if namespace  %} {{namespace}}__section-title {% endif %}">
       {%- block sectionTitle -%}
