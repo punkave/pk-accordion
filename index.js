@@ -5,11 +5,13 @@ module.exports = {
     modules: ['pk-accordion-section-widgets', 'pk-accordion-widgets'],
     directory: 'lib/modules'
   },
-  afterConstruct: function (self) {
+  afterConstruct: (self) => {
+    if (self.options.styles) {
+      self.pushAsset('stylesheet', 'always', {
+        when: 'always'
+      });
+    }
     self.pushAsset('script', 'always', {
-      when: 'always'
-    });
-    self.pushAsset('stylesheet', 'always', {
       when: 'always'
     });
   }

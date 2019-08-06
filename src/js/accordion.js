@@ -1,5 +1,5 @@
 import pkutils from 'pk-utilities';
-const component = '[data-component=pk-accordion]';
+const component = '[data-component=pk-accordion-section]';
 const header = '[data-role=pk-accordion-section-header]';
 const trigger = '[data-role=pk-accordion-section-trigger]';
 
@@ -8,21 +8,17 @@ export default {
 };
 
 function init () {
-  apos.define('pk-accordion-widgets', {
+  apos.define('pk-accordion-section-widgets', {
     extend: 'apostrophe-widgets',
     construct: function (self, options) {
       self.play = function ($widget, data, options) {
-        const accordion = $widget[0].querySelector(component);
-        const triggers = accordion.querySelectorAll(trigger);
-
-        triggers.forEach(trigger => {
-          const currentTrigger = trigger;
-          const currentViewport = pkutils.helpers.closest(currentTrigger, header).nextElementSibling;
-          trigger.addEventListener('click', (event) => {
-            toggleSection({
-              trigger: currentTrigger,
-              viewport: currentViewport
-            });
+        const section = $widget[0].querySelector(component);
+        const currentTrigger = section.querySelector(trigger);
+        const currentViewport = pkutils.helpers.closest(currentTrigger, header).nextElementSibling;
+        currentTrigger.addEventListener('click', (event) => {
+          toggleSection({
+            trigger: currentTrigger,
+            viewport: currentViewport
           });
         });
 
