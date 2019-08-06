@@ -10,12 +10,15 @@ This bundle contains two widgets for a complete ApostropheCMS accordion widget.
 The schema for `pk-accordion-section-widgets` contains a title `string` field as well as an area of widgets that you can configure yourself.
 
 ## How To Use
-Declare the bundle in app.js
+Declare the bundle in app.js. If you want to init the module with the basic css, set `options.styles` of `pk-accordion` to `true`
+
 ```js
 
 bundles: [ 'pk-accordion' ],
 modules: {
-  'pk-accordion': {},
+  'pk-accordion': {
+    styles: true
+  },
   'pk-accordion-widgets': {},
   'pk-accordion-section-widgets': {}
 }
