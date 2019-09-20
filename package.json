@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/punkave/pk-accordion#readme",
   "dependencies": {
-    "pk-utilities": "git+https://punkhub:5cafa101c142b77ee0edc5f7cb098ca7b7213f8b@github.com/punkave/pk-utilities.git#1.0.1"
+    "pk-utilities": "git+https://punkhub:5cafa101c142b77ee0edc5f7cb098ca7b7213f8b@github.com/punkave/pk-utilities.git#1.0.2"
   },
   "devDependencies": {
     "chalk": "^2.4.2",
