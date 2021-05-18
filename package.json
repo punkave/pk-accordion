@@ -1,6 +1,6 @@
 {
   "name": "pk-accordion",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A bundle of accordion widgets for ApostropheCMS",
   "main": "index.js",
   "scripts": {
